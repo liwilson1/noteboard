@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+:root{
+    --font: 'Roboto', sans-serif;
+}
+html{
+    font-family: var(--font);
+
+}
+header{
+    text-align: center;
+}
+main{
+    width:80%;
+    margin:0 auto;
+}
+form{
+    background-color: lightgray;
+    padding: 10px;
+}
+input{
+    box-sizing: border-box;
+    width: 100%;
+}
+#notes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.note{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    border: 1px solid;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.deleteBtn{
+    width: 100%;
+    border:none;
+    cursor: pointer;
+    padding: 15px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+.deleteBtn:hover{
+    background-color: rgb(170, 0, 0);
+
+}
+#notes:empty::before{
+    content: 'No notes yet, create one!';
+}
