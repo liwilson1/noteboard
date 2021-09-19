@@ -37,7 +37,7 @@ var Form = (function(){
     }
 
     pub.setup = function(){
-        axios.get('//localhost:5000/api/posts', {})
+        axios.get('/api/posts', {})
         .then(function(response){
             response.data.forEach((a)=>{
                 var id = a.id;
