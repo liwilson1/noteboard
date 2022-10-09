@@ -32,6 +32,18 @@ router.post('/', (req, res) =>{
     res.status(201).send("Created");
 })
 
+// Update post
+router.put('/:id', (req, res) =>{
+    var id = req.params.id
+    var title = req.body.title
+    var body = req.body.body
+    var sql = "UPDATE noteboard SET title = ?, body = ? WHERE id = ?"
+    db.query(sql, [title, body, id], function(error, results, fields){
+        if(error) throw error;
+        console.log("hello")
+    })
+    res.status(200).send("Updated Note!")
+})
 // Delete Post
 router.delete('/:id', (req,res) =>{
     var id = req.params.id

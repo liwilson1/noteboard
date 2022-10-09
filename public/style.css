@@ -38,7 +38,7 @@ input{
     border-radius: 5px;
     padding: 5px;
 }
-.deleteBtn{
+.redBtn{
     width: 100%;
     border:none;
     cursor: pointer;
@@ -46,7 +46,7 @@ input{
     background-color: rgb(255, 0, 0);
     color: white;
 }
-.deleteBtn:hover{
+.redBtn:hover{
     background-color: rgb(170, 0, 0);
 
 }
@@ -59,4 +59,8 @@ input{
 #notes{
     padding:0;
     list-style: none;
+}
+.editPopup{
+    display:none;
+    width: 200px;
 }
