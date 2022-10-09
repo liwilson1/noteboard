@@ -1,8 +1,8 @@
 var Form = (function(){
     var pub = {};
     var noteHtml = ({id, title
-        , body}) => `<div class="note"><p>Note id: <span id="id">${id}</span></p><p>${title}</p><p>${body}</p>
-        <button type="button" class="deleteBtn">Delete</button></div>`;
+        , body}) => `<li><div class="note"><p>Note id: <span id="id">${id}</span></p><p>${title}</p><p>${body}</p>
+        <button type="button" class="deleteBtn">Delete</button></div></li>`;
     var deleteApi = ({id}) => `/api/posts/${id}`
     function postNote(){
         var title = $("#title").val()

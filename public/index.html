@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="form.js"></script>
     
+
     <title>Noteboard</title>
 </head>
 <body>
@@ -18,17 +20,21 @@
     <main id="content">
         
         <form id="newNote">
-            <p>Create a note</p>
+            <p style="text-align: center;">Create a note</p>
             <label for="title">Title: </label>
             <input type="text" name="title"id="title">
 
             <label for="body">Text: </label>
-            <input type="text" name="body" id="body">
+            <textarea name="body" id="body" style="width:100%;"></textarea>
 
             <button id="submit">Create</button>
         </form>
         <h2>View Notes</h2>
-        <div id="notes"></div>
+        <ul id="notes"></ul>
     </main>
+    <script>
+        $("#notes").sortable();
+        $("#notes").disableSelection();
+    </script>
 </body>
 </html>

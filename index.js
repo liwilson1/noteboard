@@ -5,7 +5,7 @@ app.use(express.json())
 const posts = require('./routes/api/posts')
 
 app.get('/', function (req, res) {
-  res.send('Hello World')
+  res.redirect('/index.html')
 })
 
 app.use(express.static('public'))
