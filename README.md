@@ -13,6 +13,11 @@
     
  # How to use
  
- Head to http://localhost:5000 to use the website
+ ![Gif on how to use](howtouse.gif)
  
+ Head to http://localhost:5000 and fill out the form to add a note.
+ 
+ Notes can be edited, deleted and moved around in the grid layout.
+ 
+
  
