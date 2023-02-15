@@ -20,6 +20,7 @@ var Form = (function(){
           })
           .then(function (response) {
             console.log(response);
+            window.location = 'index.html';
           })
           .catch(function (error) {
             console.log(error);
@@ -78,7 +79,7 @@ var Form = (function(){
         .catch(function (error){
             console.log(error)
         })
-        $("#newNote").submit(postNote);
+        $(document).on("click", "#submit", postNote);
         $(document).on("click", ".deleteBtn", deleteNote);
         $(document).on("click", ".editBtn", (event)=>{
             $(event.target).parent().children().hide()
